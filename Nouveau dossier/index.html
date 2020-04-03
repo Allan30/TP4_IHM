@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<script src="/assets/js/script.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Tomato, les saveurs du moment</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <link rel="stylesheet" href="assets/font/fabfeltscript/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <div class="main-content">
+
+        <h1>Les saveurs du moment</h1>
+
+        <div id="cart">
+            <a href="#">
+                <span class="number" id="number">3</span>
+                <img src="assets/img/shopping-cart.svg" alt="" />
+            </a>
+        </div>
+
+        <div class="col">
+            <aside>
+                <div class="comments">
+                    <h2>Commentaires</h2>
+                    <ul id = "afficher">
+
+                    </ul>
+                    <form action="">
+                        <div class="form-row">
+                            <label for="pseudo">Nom</label>
+                            <input id="pseudo" name="pseudo" type="text" />
+                        </div>
+                        <div class="form-row">
+                            <label for="comment">Commentaire</label>
+                            <textarea id="comment" name="comment" type="text"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <input type="submit" id="btn" class="btn" onclick="afficher()"/>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="panier">
+                    <h2>Panier</h2>
+                    <div class="min-cart" id="panier">
+
+                    </div>
+                </div>
+            </aside>
+
+            <section>
+                <div id = "ok" class="products">
+                    <a href="" class="show-grid" id = "grid">grid </a> <a href="" class="show-list" id = "click">list</a>
+                    <ul>
+                        <li>
+                            <article data-price="5.00" data-id="1">
+                                <a href="#">
+                                    <img id="image" src="medias/produits.jpg" alt="" />
+                                    <div id="nom" class="title">Tomate pelé 300g</div>
+                                    <div id="prix" class="price">5 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne();ajouterAuPanier()" >Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article data-price="5.50" data-id="2">
+                                <a href="#">
+                                    <img src="medias/produits.jpg" alt="" />
+                                    <div class="title">Tomate pelé 300g</div>
+                                    <div class="price">5,50 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne()">Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article data-price="6.00" data-id="3">
+                                <a href="#">
+                                    <img src="medias/produits.jpg" alt="" />
+                                    <div class="title">Tomate pelé 300g</div>
+                                    <div class="price">6 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne()">Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article data-price="4.00" data-id="4">
+                                <a href="#">
+                                    <img src="medias/produits.jpg" alt="" />
+                                    <div class="title">Tomate pelé 300g</div>
+                                    <div class="price">4 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne()">Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article data-price="5.00" data-id="5">
+                                <a href="#">
+                                    <img src="medias/produits.jpg" alt="" />
+                                    <div class="title">Tomate pelé 300g</div>
+                                    <div class="price">5 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne()">Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article data-price="5.05" data-id="6">
+                                <a href="#">
+                                    <img src="medias/produits.jpg" alt="" />
+                                    <div class="title">Tomate pelé 300g</div>
+                                    <div class="price">5,05 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne()">Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article data-price="4.95" data-id="7">
+                                <a href="#">
+                                    <img src="medias/produits.jpg" alt="" />
+                                    <div class="title">Tomate pelé 300g</div>
+                                    <div class="price">4,95 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne()">Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article data-price="" data-id="8">
+                                <a href="#">
+                                    <img src="medias/produits.jpg" alt="" />
+                                    <div class="title">Tomate pelé 300g</div>
+                                    <div class="price">5 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne()">Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article data-price="" data-id="9">
+                                <a href="#">
+                                    <img src="medias/produits.jpg" alt="" />
+                                    <div class="title">Tomate pelé 300g</div>
+                                    <div class="price">5 €</div>
+                                    <a href="#" class="add-to-cart" onclick="plusOne()">Ajouter au panier</a>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
