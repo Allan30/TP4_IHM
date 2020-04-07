@@ -43,22 +43,22 @@ function plusOne(){
     document.getElementById("number").innerHTML = increment;
 }
 
+elements = document.querySelectorAll(".add-to-cart");
+
+for(var element of elements){
+    element.addEventListener('click', function(event){
+        event.preventDefault();
+        plusOne();
+        ajouterAuPanier(event.target.parentNode);
+      });
+}
+
+
 var panier = document.getElementById("panier");
 
-var image = document.createElement("img");
-var nom =  document.createElement("text");
-var prix = document.createElement("number")
-var br = document.createElement('br');
-
-function ajouterAuPanier(){
+function ajouterAuPanier(element){
     event.preventDefault();
+    panier.appendChild(element);
 
-    image.src = document.getElementById("image").src;
-    nom.innerText = document.getElementById("nom").innerText;
-    prix.innerHTML = document.getElementById("prix").innerHTML;
-
-    panier.appendChild(image);
-    panier.appendChild(nom);
-    panier.appendChild(br);
-    panier.appendChild(prix);
 }
+
